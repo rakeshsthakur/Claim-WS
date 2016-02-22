@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.mitchell.com/examples/claim" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="claim"
+	targetNamespace="http://www.mitchell.com/examples/claim" xmlns:xsd1="http://www.mitchell.com/examples/claim">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://www.mitchell.com/examples/claim"
+				schemaLocation="MitchellClaim.xsd"></xsd:import>
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="UpDateClaimRequest">
+		<wsdl:part element="xsd1:UpDateClaimRequest" name="payload" />
+	</wsdl:message>
+	<wsdl:message name="UpDateClaimResponse">
+		<wsdl:part element="xsd1:UpDateClaimResponse" name="payload" />
+	</wsdl:message>
+	
+	<wsdl:message name="GetClaimsListByLossDateRangeRequest">
+		<wsdl:part element="xsd1:GetClaimsListByLossDateRanageRequest"
+			name="payload" />
+	</wsdl:message>
+	<wsdl:message name="GetClaimsListByLossDateRangeResponse">
+		<wsdl:part element="xsd1:GetClaimsListByLossDateRangeResponse"
+			name="payload" />
+	</wsdl:message>
+	
+	<wsdl:message name="CreateClaimRequest">
+		<wsdl:part element="xsd1:MitchellClaim" name="payload" />
+	</wsdl:message>
+	<wsdl:message name="CreateClaimResponse">
+		<wsdl:part element="xsd1:CreateClaimResponse" name="payload" />
+	</wsdl:message>
+
+	<wsdl:message name="GetClaimByClaimIdRequest">
+		<wsdl:part element="xsd1:GetClaimByClaimIdRequest" name="payload" />
+	</wsdl:message>
+	<wsdl:message name="GetClaimByClaimIdResponse">
+		<wsdl:part element="xsd1:GetClaimByClaimIdResponse" name="payload" />
+	</wsdl:message>
+
+	<wsdl:portType name="ClaimService">
+		<wsdl:operation name="CreateClaim">
+			<wsdl:input message="tns:CreateClaimRequest" />
+			<wsdl:output message="tns:CreateClaimResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="GetClaimByClaimId">
+			<wsdl:input message="tns:GetClaimByClaimIdRequest" />
+			<wsdl:output message="tns:GetClaimByClaimIdResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="GetClaimsListByLossDateRange">
+			<wsdl:input message="tns:GetClaimsListByLossDateRangeRequest" />
+			<wsdl:output message="tns:GetClaimsListByLossDateRangeResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="UpDateClaim">
+			<wsdl:input message="tns:UpDateClaimRequest" />
+			<wsdl:output message="tns:UpDateClaimResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="claimSOAPBinding" type="tns:ClaimService">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="CreateClaim">
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetClaimByClaimId">
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetClaimsListByLossDateRange">
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="UpDateClaim">
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="Claim">
+		<wsdl:port binding="tns:claimSOAPBinding" name="SOAP">
+			<soap:address location="localhost:8080/MitchellServices/ClaimWs" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
