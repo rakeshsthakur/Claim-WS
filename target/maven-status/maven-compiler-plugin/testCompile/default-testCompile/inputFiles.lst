@@ -1,0 +1,5 @@
+/home/rakeshthakur/Workspace/claim-ws/src/test/java/com/mitchell/claim/business/utils/DomainUtilsTest.java
+/home/rakeshthakur/Workspace/claim-ws/src/test/java/com/mitchell/claim/business/dao/CreateClaimTestDao.java
+/home/rakeshthakur/Workspace/claim-ws/src/test/java/com/mitchell/claim/business/dao/GetClaimListByLossDateRange.java
+/home/rakeshthakur/Workspace/claim-ws/src/test/java/com/mitchell/claim/business/dao/ReadClaimlByClaimIdTest.java
+/home/rakeshthakur/Workspace/claim-ws/src/test/java/com/mitchell/claim/business/dao/AbstractTestClass.java
