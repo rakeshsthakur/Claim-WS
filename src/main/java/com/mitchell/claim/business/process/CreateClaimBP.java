@@ -31,6 +31,11 @@ public class CreateClaimBP extends Exception implements IGenericBusinessProcess<
 		Vehicles vehicles = new Vehicles();
 
 		List<Vehicles> vehiclesList = new ArrayList<Vehicles>();
+		
+		if (input.getClaimNumber() == null || input.getClaimNumber() == "") {
+			throw new Exception("Claim Number cannot be empty");
+		}
+		
 		if (input.getClaimNumber() == null || input.getClaimNumber() == "") {
 			throw new Exception("Claim Number cannot be empty");
 		}
@@ -50,6 +55,9 @@ public class CreateClaimBP extends Exception implements IGenericBusinessProcess<
 
 		List<VehicleInfoType> vehicleInfo = (List<VehicleInfoType>) input.getVehicles().getVehicleDetails();
 		for (VehicleInfoType b : vehicleInfo) {
+			if(b.getModelYear() ==0){
+				throw new Exception("Model year cannot be empty");
+			}
 			vehicles.setDamageDescription(b.getDamageDescription());
 			vehicles.setEngineDescription(b.getEngineDescription());
 			vehicles.setExteriorColor(b.getExteriorColor());
