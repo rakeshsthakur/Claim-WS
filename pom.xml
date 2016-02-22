@@ -8,8 +8,8 @@
 		<cxf-version>3.1.4</cxf-version>
 	</properties>
 	<packaging>war</packaging>
-	<name>Simple CXF Java-first SOAP project using Spring configuration</name>
-	<description>Simple CXF Java-first SOAP project using Spring configuration</description>
+	<name>Claim-WS for Mitchell International</name>
+	<description>Simple SOAP Based service implementation for claim process</description>
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
