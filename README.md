@@ -1,2 +1,2 @@
 # Claim-WS
-Code Challenge for Mitchell
+Solution for Code Challenge from Mitchell
