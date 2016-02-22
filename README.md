@@ -1,4 +1,4 @@
 # Claim-WS
-Solution for Code Challenge from Mitchell
+Solution for Coding Challenge from Mitchell
 
-reffer to readMe.txt for more info.
+please, Reffer to readMe.txt for more info.
